@@ -372,7 +372,7 @@ namespace InternalService
             SaveLoad.LoadReportId();
             SaveLoad.SaveReporters();
             SaveLoad.SaveReportId();
-            
+            Info.BotToken = Info.GetBotToken();
 
             Thread thread = new Thread(new Program().RunBotAsync().GetAwaiter().GetResult);
             thread.Start();

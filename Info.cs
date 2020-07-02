@@ -7,7 +7,7 @@ namespace InternalService
     {
         public static readonly string Version = "1.A.4";
 
-        public static readonly string BotToken = "Bot token was here....";
+        public static string BotToken = "";
         public static readonly ulong ServerId = 678659777550745608;
 
         public static readonly ulong ReportChannelId = 678908085615591431;
@@ -25,9 +25,17 @@ namespace InternalService
         private static readonly string DataFolderName = "InternalServiceData";
         private static readonly string HostDataPath = Path.Combine("/etc/PluginData/", DataFolderName);
 
+        private static readonly string BotTokenFileName = "DiscordBotToken.txt";
+        private static readonly string BotTokenFilePath = Path.Combine("/etc/PluginData/", BotTokenFileName);
+
         public static string GetDataPath()
         {
             return HostDataPath;
+        }
+
+        public static string GetBotToken()
+        {
+            return File.ReadAllText(BotTokenFilePath);
         }
 
         public static void CreateData()
