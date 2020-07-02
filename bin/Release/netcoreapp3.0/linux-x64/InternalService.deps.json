@@ -1,0 +1,3015 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0/linux-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {},
+    ".NETCoreApp,Version=v3.0/linux-x64": {
+      "InternalService/1.0.0": {
+        "dependencies": {
+          "Discord.Net": "2.2.0",
+          "PlayersWhoPlayed": "1.0.0.0",
+          "runtimepack.Microsoft.NETCore.App.Runtime.linux-x64": "3.0.3"
+        },
+        "runtime": {
+          "InternalService.dll": {}
+        }
+      },
+      "runtimepack.Microsoft.NETCore.App.Runtime.linux-x64/3.0.3": {
+        "runtime": {
+          "Microsoft.CSharp.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "Microsoft.VisualBasic.Core.dll": {
+            "assemblyVersion": "10.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "Microsoft.VisualBasic.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "Microsoft.Win32.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "Microsoft.Win32.Registry.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.AppContext.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Buffers.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Collections.Concurrent.dll": {
+            "assemblyVersion": "4.0.14.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Collections.Immutable.dll": {
+            "assemblyVersion": "1.2.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Collections.NonGeneric.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Collections.Specialized.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Collections.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.DataAnnotations.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.EventBasedAsync.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.Primitives.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.TypeConverter.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Configuration.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Console.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Data.Common.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Data.DataSetExtensions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Data.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.Contracts.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.Debug.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.FileVersionInfo.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.Process.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.StackTrace.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.TextWriterTraceListener.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.Tools.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.TraceSource.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Diagnostics.Tracing.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Drawing.Primitives.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Drawing.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Dynamic.Runtime.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Globalization.Calendars.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Globalization.Extensions.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Globalization.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Compression.Brotli.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Compression.FileSystem.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Compression.ZipFile.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Compression.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.FileSystem.AccessControl.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.FileSystem.DriveInfo.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.FileSystem.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.FileSystem.Watcher.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.FileSystem.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.IsolatedStorage.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.MemoryMappedFiles.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Pipes.AccessControl.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.Pipes.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.UnmanagedMemoryStream.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.IO.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Linq.Expressions.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Linq.Parallel.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Linq.Queryable.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Linq.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Memory.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Http.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.HttpListener.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Mail.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.NameResolution.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.NetworkInformation.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Ping.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Requests.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Security.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.ServicePoint.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.Sockets.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.WebClient.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.WebHeaderCollection.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.WebProxy.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.WebSockets.Client.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.WebSockets.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Net.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.5.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Numerics.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ObjectModel.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Private.DataContractSerialization.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Private.Uri.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Private.Xml.Linq.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Private.Xml.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.DispatchProxy.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Emit.ILGeneration.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Emit.Lightweight.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Emit.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Extensions.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Metadata.dll": {
+            "assemblyVersion": "1.4.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.TypeExtensions.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Reflection.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Resources.Reader.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Resources.ResourceManager.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Resources.Writer.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.5.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Runtime.CompilerServices.VisualC.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Extensions.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Handles.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.InteropServices.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.InteropServices.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Intrinsics.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Loader.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Numerics.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Serialization.Formatters.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Serialization.Json.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Serialization.Primitives.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Serialization.Xml.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.Serialization.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.WindowsRuntime.UI.Xaml.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.14.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Runtime.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.AccessControl.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Claims.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.Algorithms.dll": {
+            "assemblyVersion": "4.3.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.Cng.dll": {
+            "assemblyVersion": "4.3.2.1",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.Csp.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.Encoding.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.OpenSsl.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Cryptography.X509Certificates.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Principal.Windows.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.Principal.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.SecureString.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Security.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ServiceModel.Web.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ServiceProcess.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.Encoding.Extensions.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.Encoding.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.Encodings.Web.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.Json.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Text.RegularExpressions.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Channels.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Overlapped.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Tasks.Dataflow.dll": {
+            "assemblyVersion": "4.6.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Tasks.Extensions.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Tasks.Parallel.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Tasks.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Thread.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.ThreadPool.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.Timer.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Threading.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Transactions.Local.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Transactions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.ValueTuple.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Web.HttpUtility.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Web.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Windows.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.Linq.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.ReaderWriter.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.Serialization.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.XDocument.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.XPath.XDocument.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.XPath.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.XmlDocument.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.XmlSerializer.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.Xml.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "System.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "WindowsBase.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "mscorlib.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6701"
+          },
+          "netstandard.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "4.700.20.6701"
+          }
+        },
+        "native": {
+          "SOS_README.md": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Globalization.Native.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.IO.Compression.Native.a": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.IO.Compression.Native.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Native.a": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Native.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Net.Http.Native.a": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Net.Http.Native.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Net.Security.Native.a": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Net.Security.Native.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Private.CoreLib.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.700.20.6603"
+          },
+          "System.Security.Cryptography.Native.OpenSsl.a": {
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Security.Cryptography.Native.OpenSsl.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "createdump": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libclrjit.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libcoreclr.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libcoreclrtraceptprovider.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libdbgshim.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libhostfxr.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libhostpolicy.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libmscordaccore.so": {
+            "fileVersion": "0.0.0.0"
+          },
+          "libmscordbi.so": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Discord.Net/2.2.0": {
+        "dependencies": {
+          "Discord.Net.Commands": "2.2.0",
+          "Discord.Net.Core": "2.2.0",
+          "Discord.Net.Rest": "2.2.0",
+          "Discord.Net.WebSocket": "2.2.0",
+          "Discord.Net.Webhook": "2.2.0"
+        }
+      },
+      "Discord.Net.Commands/2.2.0": {
+        "dependencies": {
+          "Discord.Net.Core": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Discord.Net.Commands.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Discord.Net.Core/2.2.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "System.Collections.Immutable": "1.3.1",
+          "System.Interactive.Async": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Discord.Net.Core.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Discord.Net.Rest/2.2.0": {
+        "dependencies": {
+          "Discord.Net.Core": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Discord.Net.Rest.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Discord.Net.Webhook/2.2.0": {
+        "dependencies": {
+          "Discord.Net.Core": "2.2.0",
+          "Discord.Net.Rest": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Discord.Net.Webhook.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Discord.Net.WebSocket/2.2.0": {
+        "dependencies": {
+          "Discord.Net.Core": "2.2.0",
+          "Discord.Net.Rest": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Discord.Net.WebSocket.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "runtime.any.System.Collections/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "runtime.any.System.Globalization/4.3.0": {},
+      "runtime.any.System.IO/4.3.0": {},
+      "runtime.any.System.Reflection/4.3.0": {},
+      "runtime.any.System.Reflection.Primitives/4.3.0": {},
+      "runtime.any.System.Resources.ResourceManager/4.3.0": {},
+      "runtime.any.System.Runtime/4.3.0": {
+        "dependencies": {
+          "System.Private.Uri": "4.3.0"
+        }
+      },
+      "runtime.any.System.Text.Encoding/4.3.0": {},
+      "runtime.any.System.Threading.Tasks/4.3.0": {},
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.native.System/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+        "dependencies": {
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+        }
+      },
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.unix.System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        }
+      },
+      "runtime.unix.System.Private.Uri/4.3.0": {
+        "dependencies": {
+          "runtime.native.System": "4.3.0"
+        }
+      },
+      "runtime.unix.System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "System.Private.Uri": "4.3.0",
+          "runtime.native.System": "4.3.0",
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
+        }
+      },
+      "System.Collections/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Collections": "4.3.0"
+        }
+      },
+      "System.Collections.Immutable/1.3.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
+      "System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.unix.System.Diagnostics.Debug": "4.3.0"
+        }
+      },
+      "System.Globalization/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Globalization": "4.3.0"
+        }
+      },
+      "System.Interactive.Async/4.0.0": {
+        "dependencies": {
+          "System.Linq.Async": "4.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Interactive.Async.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.2"
+          }
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "runtime.any.System.IO": "4.3.0"
+        }
+      },
+      "System.Linq/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
+        }
+      },
+      "System.Linq.Async/4.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.Linq.Async.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.2"
+          }
+        }
+      },
+      "System.Private.Uri/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.unix.System.Private.Uri": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Reflection": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Reflection.Primitives": "4.3.0"
+        }
+      },
+      "System.Resources.ResourceManager/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Resources.ResourceManager": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "runtime.any.System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.unix.System.Runtime.Extensions": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Text.Encoding": "4.3.0"
+        }
+      },
+      "System.Threading/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "runtime.any.System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "PlayersWhoPlayed/1.0.0.0": {
+        "runtime": {
+          "PlayersWhoPlayed.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EXILED/1.0.0.0": {
+        "runtime": {
+          "EXILED.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.CoreModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.CoreModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Assembly-CSharp/0.0.0.0": {
+        "runtime": {
+          "Assembly-CSharp.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "EXILED_Events/1.0.0.0": {
+        "runtime": {
+          "EXILED_Events.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.PhysicsModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.PhysicsModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.SharedInternalsModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.SharedInternalsModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.ParticleSystemModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.ParticleSystemModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.AnimationModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.AnimationModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.TerrainModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.TerrainModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.AudioModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.AudioModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.UnityWebRequestModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.UnityWebRequestModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.TextRenderingModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.TextRenderingModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.InputLegacyModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.InputLegacyModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.UnityWebRequestAudioModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.UnityWebRequestAudioModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.IMGUIModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.IMGUIModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "UnityEngine.ScreenCaptureModule/0.0.0.0": {
+        "runtime": {
+          "UnityEngine.ScreenCaptureModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InternalService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "runtimepack.Microsoft.NETCore.App.Runtime.linux-x64/3.0.3": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Discord.Net/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D6X8Ap2yLEymJ0wfG8U1oW4zOaZThdjjg9XWrTD1CbEyCQzEEdauynNLEzZhw6b3RXeDdWVCyLdJIrSGObWNpg==",
+      "path": "discord.net/2.2.0",
+      "hashPath": "discord.net.2.2.0.nupkg.sha512"
+    },
+    "Discord.Net.Commands/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hg3w+pyXOy+I4D5VWfax0IUdnmz8Ji9SOdx+8KjJXqccUVnulx6HkKc5q87BukEbOWEJuyzxo1e+pe+xnW0bgw==",
+      "path": "discord.net.commands/2.2.0",
+      "hashPath": "discord.net.commands.2.2.0.nupkg.sha512"
+    },
+    "Discord.Net.Core/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0iEjPeqm+Ez481WlRV7IsncfXZoPcae0S2wP14agtZJ6HmT1C8FdPnL/gRmz2Cqs4t8lHukqD9i7nlknaSRkLg==",
+      "path": "discord.net.core/2.2.0",
+      "hashPath": "discord.net.core.2.2.0.nupkg.sha512"
+    },
+    "Discord.Net.Rest/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tTRjurjFRfSSfGB0kOAOqzagRqXPz473U50tzt19f8OD5/9Z0EyTu5WE898wU135Um+Vb3L8XTvhZHdAmOKhGw==",
+      "path": "discord.net.rest/2.2.0",
+      "hashPath": "discord.net.rest.2.2.0.nupkg.sha512"
+    },
+    "Discord.Net.Webhook/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LmzBX2BcI5IXbmr4FZpiAWPl2BPgTwyrnZwqDdaYwbH+7FzDODX0PyieE/04D/fAP77MRb4JUvxga0MMLCuftA==",
+      "path": "discord.net.webhook/2.2.0",
+      "hashPath": "discord.net.webhook.2.2.0.nupkg.sha512"
+    },
+    "Discord.Net.WebSocket/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jZb/Ae5w0K0dnGQETcSJu0qA3j5vgG7Dtl27pAkiug90omFs5SB20WNReo25WoJuidPAa6gmaBEWm5RPaBghXw==",
+      "path": "discord.net.websocket/2.2.0",
+      "hashPath": "discord.net.websocket.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "runtime.any.System.Collections/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-23g6rqftKmovn2cLeGsuHUYm0FD7pdutb0uQMJpZ3qTvq+zHkgmt6J65VtRry4WDGYlmkMa4xDACtaQ94alNag==",
+      "path": "runtime.any.system.collections/4.3.0",
+      "hashPath": "runtime.any.system.collections.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sMDBnad4rp4t7GY442Jux0MCUuKL4otn5BK6Ni0ARTXTSpRNBzZ7hpMfKSvnVSED5kYJm96YOWsqV0JH0d2uuw==",
+      "path": "runtime.any.system.globalization/4.3.0",
+      "hashPath": "runtime.any.system.globalization.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SDZ5AD1DtyRoxYtEcqQ3HDlcrorMYXZeCt7ZhG9US9I5Vva+gpIWDGMkcwa5XiKL0ceQKRZIX2x0XEjLX7PDzQ==",
+      "path": "runtime.any.system.io/4.3.0",
+      "hashPath": "runtime.any.system.io.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hLC3A3rI8jipR5d9k7+f0MgRCW6texsAp0MWkN/ci18FMtQ9KH7E2vDn/DH2LkxsszlpJpOn9qy6Z6/69rH6eQ==",
+      "path": "runtime.any.system.reflection/4.3.0",
+      "hashPath": "runtime.any.system.reflection.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nrm1p3armp6TTf2xuvaa+jGTTmncALWFq22CpmwRvhDf6dE9ZmH40EbOswD4GnFLrMRS0Ki6Kx5aUPmKK/hZBg==",
+      "path": "runtime.any.system.reflection.primitives/4.3.0",
+      "hashPath": "runtime.any.system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lxb89SMvf8w9p9+keBLyL6H6x/TEmc6QVsIIA0T36IuyOY3kNvIdyGddA2qt35cRamzxF8K5p0Opq4G4HjNbhQ==",
+      "path": "runtime.any.system.resources.resourcemanager/4.3.0",
+      "hashPath": "runtime.any.system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fRS7zJgaG9NkifaAxGGclDDoRn9HC7hXACl52Or06a/fxdzDajWb5wov3c6a+gVSlekRoexfjwQSK9sh5um5LQ==",
+      "path": "runtime.any.system.runtime/4.3.0",
+      "hashPath": "runtime.any.system.runtime.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ihI5VaXFCMVPJNstG4O4eo1CfbrByLxRrQQTqOTp1ttK0kUKDqOdBSTaCB2IBk/QtjDrs6+x4xuezyMXdm0HQ==",
+      "path": "runtime.any.system.text.encoding/4.3.0",
+      "hashPath": "runtime.any.system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "runtime.any.System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OhBAVBQG5kFj1S+hCEQ3TUHBAEtZ3fbEMgZMRNdN8A0Pj4x+5nTELEqL59DU0TjKVE6II3dqKw4Dklb3szT65w==",
+      "path": "runtime.any.system.threading.tasks/4.3.0",
+      "hashPath": "runtime.any.system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
+      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+yH1a49wJMy8Zt4yx5RhJrxO/DBDByAiCzNwiETI+1S4mPdCu0OY4djdciC7Vssk0l22wQaDLrXxXkp+3+7bVA==",
+      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
+      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.native.System/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "path": "runtime.native.system/4.3.0",
+      "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
+    },
+    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NS1U+700m4KFRHR5o4vo9DSlTmlCKu/u7dtE5sUHVIPB+xpXxYQvgBgA6wEIeCz6Yfn0Z52/72WYsToCEPJnrw==",
+      "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zWLOQ77Y4FV/6Vw2g+FYzprbQX5/xKvjoCLe4L9159Aw1bSboQoJ1KRZFNdexDooWRAIsLSdE0ZokkrVkwN8Yw==",
+      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
+      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
+      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T5NvFgmHX0WH4c7lP72krsnk+IJI10vJf2j2twGE+5QBRA4RyRAgD+ZjEgdmpLOjW4B+nZGaadewTCUcR899OQ==",
+      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YWzJvhiC+iLWI/IfpPQUIBhYnAHUFQFRDqR7VDNmPj0b3rjW7dArFqKysZ9v0iSBs9Ih4v9GasLpYCSUwADMQQ==",
+      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1uVTITQP8/cI6YoO6FqfW1pzP0k2TnDZ3TFD88Bu/9H7ZuTsMY9xmadbGpwPu8w8swcd1ifZJsjD9hF9O6C/tg==",
+      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
+      "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "runtime.unix.System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WV8KLRHWVUVUDduFnvGMHt0FsEt2wK6xPl1EgDKlaMx2KnZ43A/O0GzP8wIuvAC7mq4T9V1mm90r+PXkL9FPdQ==",
+      "path": "runtime.unix.system.diagnostics.debug/4.3.0",
+      "hashPath": "runtime.unix.system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "runtime.unix.System.Private.Uri/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ooWzobr5RAq34r9uan1r/WPXJYG1XWy9KanrxNvEnBzbFdQbMG7Y3bVi4QxR7xZMNLOxLLTAyXvnSkfj5boZSg==",
+      "path": "runtime.unix.system.private.uri/4.3.0",
+      "hashPath": "runtime.unix.system.private.uri.4.3.0.nupkg.sha512"
+    },
+    "runtime.unix.System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zQiTBVpiLftTQZW8GFsV0gjYikB1WMkEPIxF5O6RkUrSV/OgvRRTYgeFQha/0keBpuS0HYweraGRwhfhJ7dj7w==",
+      "path": "runtime.unix.system.runtime.extensions/4.3.0",
+      "hashPath": "runtime.unix.system.runtime.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Collections/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
+      "path": "system.collections/4.3.0",
+      "hashPath": "system.collections.4.3.0.nupkg.sha512"
+    },
+    "System.Collections.Immutable/1.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n+AGX7zmiZumW9aggOkXaHzUeAS3EfeTErnkKCusyONUozbTv+kMb8VE36m+ldV6kF9g57G2c641KCdgH9E0pg==",
+      "path": "system.collections.immutable/1.3.1",
+      "hashPath": "system.collections.immutable.1.3.1.nupkg.sha512"
+    },
+    "System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
+      "path": "system.diagnostics.debug/4.3.0",
+      "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kYdVd2f2PAdFGblzFswE4hkNANJBKRmsfa2X5LG2AcWE1c7/4t0pYae1L8vfZ5xvE2nK/R9JprtToA61OSHWIg==",
+      "path": "system.globalization/4.3.0",
+      "hashPath": "system.globalization.4.3.0.nupkg.sha512"
+    },
+    "System.Interactive.Async/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tYEzSDQ3rn0G7sGgjcNB91C3dDRJc8m8Lavvu88dwt8FEwKPGZdp/tFs+lQTdqHDV9UItkGIwI8Aa6gGTvzLoQ==",
+      "path": "system.interactive.async/4.0.0",
+      "hashPath": "system.interactive.async.4.0.0.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Linq/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
+      "path": "system.linq/4.3.0",
+      "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Async/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WbiYEedFZeM+psmMyoCt1AKbZppAZg8Eq1ZTQ+521fGNeXqlgJj0tZYV5n1LsKRO5osQuitYxGNuzPTy3213sg==",
+      "path": "system.linq.async/4.0.0",
+      "hashPath": "system.linq.async.4.0.0.nupkg.sha512"
+    },
+    "System.Private.Uri/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I4SwANiUGho1esj4V4oSlPllXjzCZDE+5XXso2P03LW2vOda2Enzh8DWOxwN6hnrJyp314c7KuVu31QYhRzOGg==",
+      "path": "system.private.uri/4.3.0",
+      "hashPath": "system.private.uri.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/zrcPkkWdZmI4F92gL/TPumP98AVDu/Wxr3CSJGQQ+XN6wbRZcyfSKVoPo17ilb3iOr0cCRqJInGwNMolqhS8A==",
+      "path": "system.resources.resourcemanager/4.3.0",
+      "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
+      "path": "system.runtime.extensions/4.3.0",
+      "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
+      "path": "system.threading/4.3.0",
+      "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "PlayersWhoPlayed/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EXILED/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.CoreModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Assembly-CSharp/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EXILED_Events/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.PhysicsModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.SharedInternalsModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.ParticleSystemModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.AnimationModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.TerrainModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.AudioModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.UnityWebRequestModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.TextRenderingModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.InputLegacyModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.UnityWebRequestAudioModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.IMGUIModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnityEngine.ScreenCaptureModule/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  },
+  "runtimes": {
+    "alpine-x64": [
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.10-x64": [
+      "alpine.3.10",
+      "alpine.3.9-x64",
+      "alpine.3.9",
+      "alpine.3.8-x64",
+      "alpine.3.8",
+      "alpine.3.7-x64",
+      "alpine.3.7",
+      "alpine.3.6-x64",
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.11-x64": [
+      "alpine.3.11",
+      "alpine.3.10-x64",
+      "alpine.3.10",
+      "alpine.3.9-x64",
+      "alpine.3.9",
+      "alpine.3.8-x64",
+      "alpine.3.8",
+      "alpine.3.7-x64",
+      "alpine.3.7",
+      "alpine.3.6-x64",
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.6-x64": [
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.7-x64": [
+      "alpine.3.7",
+      "alpine.3.6-x64",
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.8-x64": [
+      "alpine.3.8",
+      "alpine.3.7-x64",
+      "alpine.3.7",
+      "alpine.3.6-x64",
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "alpine.3.9-x64": [
+      "alpine.3.9",
+      "alpine.3.8-x64",
+      "alpine.3.8",
+      "alpine.3.7-x64",
+      "alpine.3.7",
+      "alpine.3.6-x64",
+      "alpine.3.6",
+      "alpine-x64",
+      "alpine",
+      "linux-musl-x64",
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "centos-x64": [
+      "centos",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "centos.7-x64": [
+      "centos.7",
+      "centos-x64",
+      "rhel.7-x64",
+      "centos",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "centos.8-x64": [
+      "centos.8",
+      "centos-x64",
+      "rhel.8-x64",
+      "centos",
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "debian-x64": [
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "debian.10-x64": [
+      "debian.10",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "debian.8-x64": [
+      "debian.8",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "debian.9-x64": [
+      "debian.9",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora-x64": [
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.23-x64": [
+      "fedora.23",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.24-x64": [
+      "fedora.24",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.25-x64": [
+      "fedora.25",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.26-x64": [
+      "fedora.26",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.27-x64": [
+      "fedora.27",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.28-x64": [
+      "fedora.28",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.29-x64": [
+      "fedora.29",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.30-x64": [
+      "fedora.30",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.31-x64": [
+      "fedora.31",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "fedora.32-x64": [
+      "fedora.32",
+      "fedora-x64",
+      "fedora",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "gentoo-x64": [
+      "gentoo",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linux-musl-x64": [
+      "linux-musl",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linux-x64": [
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.17-x64": [
+      "linuxmint.17",
+      "ubuntu.14.04-x64",
+      "ubuntu.14.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.17.1-x64": [
+      "linuxmint.17.1",
+      "linuxmint.17-x64",
+      "linuxmint.17",
+      "ubuntu.14.04-x64",
+      "ubuntu.14.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.17.2-x64": [
+      "linuxmint.17.2",
+      "linuxmint.17.1-x64",
+      "linuxmint.17.1",
+      "linuxmint.17-x64",
+      "linuxmint.17",
+      "ubuntu.14.04-x64",
+      "ubuntu.14.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.17.3-x64": [
+      "linuxmint.17.3",
+      "linuxmint.17.2-x64",
+      "linuxmint.17.2",
+      "linuxmint.17.1-x64",
+      "linuxmint.17.1",
+      "linuxmint.17-x64",
+      "linuxmint.17",
+      "ubuntu.14.04-x64",
+      "ubuntu.14.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.18-x64": [
+      "linuxmint.18",
+      "ubuntu.16.04-x64",
+      "ubuntu.16.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.18.1-x64": [
+      "linuxmint.18.1",
+      "linuxmint.18-x64",
+      "linuxmint.18",
+      "ubuntu.16.04-x64",
+      "ubuntu.16.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.18.2-x64": [
+      "linuxmint.18.2",
+      "linuxmint.18.1-x64",
+      "linuxmint.18.1",
+      "linuxmint.18-x64",
+      "linuxmint.18",
+      "ubuntu.16.04-x64",
+      "ubuntu.16.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.18.3-x64": [
+      "linuxmint.18.3",
+      "linuxmint.18.2-x64",
+      "linuxmint.18.2",
+      "linuxmint.18.1-x64",
+      "linuxmint.18.1",
+      "linuxmint.18-x64",
+      "linuxmint.18",
+      "ubuntu.16.04-x64",
+      "ubuntu.16.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.19-x64": [
+      "linuxmint.19",
+      "ubuntu.18.04-x64",
+      "ubuntu.18.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.19.1-x64": [
+      "linuxmint.19.1",
+      "linuxmint.19-x64",
+      "linuxmint.19",
+      "ubuntu.18.04-x64",
+      "ubuntu.18.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "linuxmint.19.2-x64": [
+      "linuxmint.19.2",
+      "linuxmint.19.1-x64",
+      "linuxmint.19.1",
+      "linuxmint.19-x64",
+      "linuxmint.19",
+      "ubuntu.18.04-x64",
+      "ubuntu.18.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol-x64": [
+      "ol",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7-x64": [
+      "ol.7",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.0-x64": [
+      "ol.7.0",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.1-x64": [
+      "ol.7.1",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.2-x64": [
+      "ol.7.2",
+      "ol.7.1-x64",
+      "rhel.7.2-x64",
+      "ol.7.1",
+      "rhel.7.2",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.3-x64": [
+      "ol.7.3",
+      "ol.7.2-x64",
+      "rhel.7.3-x64",
+      "ol.7.2",
+      "rhel.7.3",
+      "ol.7.1-x64",
+      "rhel.7.2-x64",
+      "ol.7.1",
+      "rhel.7.2",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.4-x64": [
+      "ol.7.4",
+      "ol.7.3-x64",
+      "rhel.7.4-x64",
+      "ol.7.3",
+      "rhel.7.4",
+      "ol.7.2-x64",
+      "rhel.7.3-x64",
+      "ol.7.2",
+      "rhel.7.3",
+      "ol.7.1-x64",
+      "rhel.7.2-x64",
+      "ol.7.1",
+      "rhel.7.2",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.5-x64": [
+      "ol.7.5",
+      "ol.7.4-x64",
+      "rhel.7.5-x64",
+      "ol.7.4",
+      "rhel.7.5",
+      "ol.7.3-x64",
+      "rhel.7.4-x64",
+      "ol.7.3",
+      "rhel.7.4",
+      "ol.7.2-x64",
+      "rhel.7.3-x64",
+      "ol.7.2",
+      "rhel.7.3",
+      "ol.7.1-x64",
+      "rhel.7.2-x64",
+      "ol.7.1",
+      "rhel.7.2",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.7.6-x64": [
+      "ol.7.6",
+      "ol.7.5-x64",
+      "rhel.7.6-x64",
+      "ol.7.5",
+      "rhel.7.6",
+      "ol.7.4-x64",
+      "rhel.7.5-x64",
+      "ol.7.4",
+      "rhel.7.5",
+      "ol.7.3-x64",
+      "rhel.7.4-x64",
+      "ol.7.3",
+      "rhel.7.4",
+      "ol.7.2-x64",
+      "rhel.7.3-x64",
+      "ol.7.2",
+      "rhel.7.3",
+      "ol.7.1-x64",
+      "rhel.7.2-x64",
+      "ol.7.1",
+      "rhel.7.2",
+      "ol.7.0-x64",
+      "rhel.7.1-x64",
+      "ol.7.0",
+      "rhel.7.1",
+      "ol.7-x64",
+      "rhel.7.0-x64",
+      "ol.7",
+      "rhel.7.0",
+      "ol-x64",
+      "rhel.7-x64",
+      "ol",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.8-x64": [
+      "ol.8",
+      "ol-x64",
+      "rhel.8-x64",
+      "ol",
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ol.8.0-x64": [
+      "ol.8.0",
+      "ol.8-x64",
+      "rhel.8.0-x64",
+      "ol.8",
+      "rhel.8.0",
+      "ol-x64",
+      "rhel.8-x64",
+      "ol",
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse-x64": [
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.13.2-x64": [
+      "opensuse.13.2",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.15.0-x64": [
+      "opensuse.15.0",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.15.1-x64": [
+      "opensuse.15.1",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.42.1-x64": [
+      "opensuse.42.1",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.42.2-x64": [
+      "opensuse.42.2",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "opensuse.42.3-x64": [
+      "opensuse.42.3",
+      "opensuse-x64",
+      "opensuse",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel-x64": [
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.6-x64": [
+      "rhel.6",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7-x64": [
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.0-x64": [
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.1-x64": [
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.2-x64": [
+      "rhel.7.2",
+      "rhel.7.1-x64",
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.3-x64": [
+      "rhel.7.3",
+      "rhel.7.2-x64",
+      "rhel.7.2",
+      "rhel.7.1-x64",
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.4-x64": [
+      "rhel.7.4",
+      "rhel.7.3-x64",
+      "rhel.7.3",
+      "rhel.7.2-x64",
+      "rhel.7.2",
+      "rhel.7.1-x64",
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.5-x64": [
+      "rhel.7.5",
+      "rhel.7.4-x64",
+      "rhel.7.4",
+      "rhel.7.3-x64",
+      "rhel.7.3",
+      "rhel.7.2-x64",
+      "rhel.7.2",
+      "rhel.7.1-x64",
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.7.6-x64": [
+      "rhel.7.6",
+      "rhel.7.5-x64",
+      "rhel.7.5",
+      "rhel.7.4-x64",
+      "rhel.7.4",
+      "rhel.7.3-x64",
+      "rhel.7.3",
+      "rhel.7.2-x64",
+      "rhel.7.2",
+      "rhel.7.1-x64",
+      "rhel.7.1",
+      "rhel.7.0-x64",
+      "rhel.7.0",
+      "rhel.7-x64",
+      "rhel.7",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.8-x64": [
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.8.0-x64": [
+      "rhel.8.0",
+      "rhel.8-x64",
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "rhel.8.1-x64": [
+      "rhel.8.1",
+      "rhel.8.0-x64",
+      "rhel.8.0",
+      "rhel.8-x64",
+      "rhel.8",
+      "rhel-x64",
+      "rhel",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles-x64": [
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.12-x64": [
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.12.1-x64": [
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.12.2-x64": [
+      "sles.12.2",
+      "sles.12.1-x64",
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.12.3-x64": [
+      "sles.12.3",
+      "sles.12.2-x64",
+      "sles.12.2",
+      "sles.12.1-x64",
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.12.4-x64": [
+      "sles.12.4",
+      "sles.12.3-x64",
+      "sles.12.3",
+      "sles.12.2-x64",
+      "sles.12.2",
+      "sles.12.1-x64",
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.15-x64": [
+      "sles.15",
+      "sles.12.4-x64",
+      "sles.12.4",
+      "sles.12.3-x64",
+      "sles.12.3",
+      "sles.12.2-x64",
+      "sles.12.2",
+      "sles.12.1-x64",
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "sles.15.1-x64": [
+      "sles.15.1",
+      "sles.15-x64",
+      "sles.15",
+      "sles.12.4-x64",
+      "sles.12.4",
+      "sles.12.3-x64",
+      "sles.12.3",
+      "sles.12.2-x64",
+      "sles.12.2",
+      "sles.12.1-x64",
+      "sles.12.1",
+      "sles.12-x64",
+      "sles.12",
+      "sles-x64",
+      "sles",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu-x64": [
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.14.04-x64": [
+      "ubuntu.14.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.14.10-x64": [
+      "ubuntu.14.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.15.04-x64": [
+      "ubuntu.15.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.15.10-x64": [
+      "ubuntu.15.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.16.04-x64": [
+      "ubuntu.16.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.16.10-x64": [
+      "ubuntu.16.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.17.04-x64": [
+      "ubuntu.17.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.17.10-x64": [
+      "ubuntu.17.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.18.04-x64": [
+      "ubuntu.18.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.18.10-x64": [
+      "ubuntu.18.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.19.04-x64": [
+      "ubuntu.19.04",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ],
+    "ubuntu.19.10-x64": [
+      "ubuntu.19.10",
+      "ubuntu-x64",
+      "ubuntu",
+      "debian-x64",
+      "debian",
+      "linux-x64",
+      "linux",
+      "unix-x64",
+      "unix",
+      "any",
+      "base"
+    ]
+  }
+}
