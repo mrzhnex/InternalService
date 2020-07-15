@@ -5,117 +5,55 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using InternalService.Accountant;
+using InternalService.Internal;
+using InternalService.Manage;
+using InternalService.Logs;
 
 namespace InternalService
 {
     public class Program
     {
-        public static DiscordSocketClient _client;
+        public static Program ProgramSession;
+        public DiscordSocketClient DiscordSocketClient { get; set; }
 
+        #region Main functions
         public async Task RunBotAsync()
         {
-            _client = new DiscordSocketClient();
-            _client.Log += Log;
+            DiscordSocketClient = new DiscordSocketClient();
+            DiscordSocketClient.Log += Log;
             RegisterCommand();
-            await _client.LoginAsync(TokenType.Bot, Info.BotToken);
-            await _client.StartAsync();
+            await DiscordSocketClient.LoginAsync(TokenType.Bot, Info.BotToken);
+            await DiscordSocketClient.StartAsync();
             await Task.Delay(-1);
         }
-
         private Task Log(LogMessage arg)
         {
             Console.WriteLine(arg);
             return Task.CompletedTask;
         }
-
         public void RegisterCommand()
         {
-            _client.MessageReceived += HandleCommandAsync;
-            _client.MessageUpdated += HandleMessageUpdatedAsync;
+            DiscordSocketClient.MessageReceived += HandleCommandAsync;
+            DiscordSocketClient.MessageUpdated += HandleMessageUpdatedAsync;
         }
-
-
-        public bool CheckUserIsAccountant(ulong discordId)
+        public static void Main()
         {
-            if (_client.GetGuild(RoleplayNickname.ServerId).GetUser(discordId) != null)
-            {
-                if (_client.GetGuild(RoleplayNickname.ServerId).GetUser(discordId).Roles.Where(x => x.Id == RoleplayNickname.AccountantRoleId).FirstOrDefault() != default)
-                    return true;
-            }
-            return false;
+            Console.WriteLine("Program version - " + Info.Version);
+            Info.CreateData();
+            SaveLoad.LoadReporters();
+            SaveLoad.LoadReportId();
+            SaveLoad.SaveReporters();
+            SaveLoad.SaveReportId();
+            Info.BotToken = Info.GetBotToken();
+            ProgramSession = new Program();
+            Thread thread = new Thread(ProgramSession.RunBotAsync().GetAwaiter().GetResult);
+            thread.Start();
+            Thread thread1 = new Thread(FullRP.PlayersWhoPlayedMethods.LoopCheckForUpdate);
+            thread1.Start();
+            Thread thread2 = new Thread(Global.UpdateServers);
+            thread2.Start();
         }
-
-        private async Task HandleMessageUpdatedAsync(Cacheable<IMessage, ulong> arg1, SocketMessage arg2, ISocketMessageChannel arg3)
-        {
-            ulong userdiscordid = arg2.Author.Id;
-            if (!CheckUserIsAccountant(userdiscordid))
-                return;
-            string message = string.Empty;
-            switch (arg2.Channel.Id)
-            {
-                case RoleplayNickname.FullRpWhitelistChannelId:
-                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
-                    {
-                        if (i == 0)
-                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
-                        else
-                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
-                    }
-                    RoleplayNickname.UpdateFullRpWhitelist(message);
-                    await _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.FullRpWhitelistChannelId).Mention);
-                    break;
-                case RoleplayNickname.PluginIdentifyChannelId:
-                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
-                    {
-                        if (i == 0)
-                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
-                        else
-                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
-                    }
-                    RoleplayNickname.UpdatePluginIdentify(message);
-                    await _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.PluginIdentifyChannelId).Mention);
-                    break;
-                case RoleplayNickname.PluginIdentifyRandomChannelId:
-                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
-                    {
-                        if (i == 0)
-                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
-                        else
-                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
-                    }
-                    RoleplayNickname.UpdatePluginIdentifyRandom(message);
-                    await _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + _client.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.PluginIdentifyRandomChannelId).Mention);
-                    break;
-            }
-            return;
-        }
-
-        private static void Baldeurik()
-        {
-            string message = "alex rubit den'gi s donaterov oaoaoa start\n";
-            foreach (SocketRole role in _client.GetGuild(351766372264574976).Roles)
-            {
-                if (role.Members.Count() == 0)
-                {
-                    message = message + role.Mention + " is empty\n";
-                }
-            }
-            _client.GetGuild(351766372264574976).GetTextChannel(689181158730104973).SendMessageAsync(message + "\nend");
-        }
-
-        public bool CheckUserHaveAccessToLogs(ulong discordId)
-        {
-            if (_client.GetGuild(351766372264574976).GetUser(discordId) != null)
-            {
-                foreach (ulong id in Global.AccessLogsRolesId)
-                {
-                    if (_client.GetGuild(351766372264574976).GetUser(discordId).Roles.Where(x => x.Id == id).FirstOrDefault() != default)
-                        return true;
-                }
-            }
-            return false;
-        }
-
         public async Task HandleCommandAsync(SocketMessage arg)
         {
             if (arg.Content is null || arg.Author.IsBot)
@@ -124,9 +62,9 @@ namespace InternalService
             }
             if (arg.Channel.Id == 689181158730104973 && arg.Content.ToLower() == "!emptyroles")
             {
-                Baldeurik();
+                WriteEmptyRoles();
             }
-            
+
             if (arg.Channel.Id == Info.ManageChannelId)
             {
                 if (arg.Content.ToLower().Contains((KeyWord.Prefix + KeyWord.AddReporter).ToLower()) && arg.Content.ToLower().IndexOf((KeyWord.Prefix + KeyWord.AddReporter).ToLower()) == 0)
@@ -190,9 +128,9 @@ namespace InternalService
                     string answer = string.Empty;
                     foreach (ulong id in Info.Reporters)
                     {
-                        if (_client.GetUser(id) != null)
+                        if (DiscordSocketClient.GetUser(id) != null)
                         {
-                            answer = answer + _client.GetUser(id).Mention + "\n";
+                            answer = answer + DiscordSocketClient.GetUser(id).Mention + "\n";
                         }
                         else
                         {
@@ -221,7 +159,7 @@ namespace InternalService
                         if (arg.Channel.GetMessageAsync(Session.DiscordUsersLogsDialogue[userdiscordid].LastSessionMessage).Result != null)
                             await arg.Channel.DeleteMessageAsync(Session.DiscordUsersLogsDialogue[userdiscordid].LastSessionMessage);
                         Session.DiscordUsersLogsDialogue.Remove(userdiscordid);
-                        await arg.Author.SendFileAsync(Path.Combine("/etc/PluginData/", Info.LogsExitFileName), "До связи...");
+                        await arg.Author.SendFileAsync(Path.Combine("/etc/scpsl/Plugin/", Info.LogsExitFileName), "До связи...");
                         return;
                     }
                     switch (Session.DiscordUsersLogsDialogue[userdiscordid].LogsDialogueStage)
@@ -287,51 +225,51 @@ namespace InternalService
 
             if (Info.Reporters.Contains(userdiscordid))
             {
-                if (Session.DiscordUsersReportDialogue.ContainsKey(userdiscordid))
+                if (Claim.DiscordUsersReportDialogue.ContainsKey(userdiscordid))
                 {
-                    switch (Session.DiscordUsersReportDialogue[userdiscordid].ReportStage)
+                    switch (Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage)
                     {
                         case ReportStage.SuspectQuestion:
-                            Session.DiscordUsersReportDialogue[userdiscordid].Suspect = arg.Content;
-                            Session.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ReasonQuestion;
-                            await arg.Channel.SendMessageAsync(KeyWord.QuestionsReport[Session.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
+                            Claim.DiscordUsersReportDialogue[userdiscordid].Suspect = arg.Content;
+                            Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ReasonQuestion;
+                            await arg.Channel.SendMessageAsync(KeyWord.QuestionsReport[Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
                             break;
                         case ReportStage.ReasonQuestion:
-                            Session.DiscordUsersReportDialogue[userdiscordid].Reason = arg.Content;
-                            Session.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ProofQuestion;
-                            await arg.Channel.SendMessageAsync(KeyWord.QuestionsReport[Session.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
+                            Claim.DiscordUsersReportDialogue[userdiscordid].Reason = arg.Content;
+                            Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ProofQuestion;
+                            await arg.Channel.SendMessageAsync(KeyWord.QuestionsReport[Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
                             break;
                         case ReportStage.ProofQuestion:
 
                             if (arg.Content.ToLower() == (KeyWord.Prefix + KeyWord.ProofKeyWordEnd).ToLower())
                             {
-                                Session.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ConfirmSendQuestion;
-                                await arg.Channel.SendMessageAsync(Session.GetReportMessagePreView(Session.DiscordUsersReportDialogue[userdiscordid]) + "\n" + KeyWord.ConfirmSendQuestion);
+                                Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage = ReportStage.ConfirmSendQuestion;
+                                await arg.Channel.SendMessageAsync(Claim.GetReportMessagePreView(Claim.DiscordUsersReportDialogue[userdiscordid]) + "\n" + KeyWord.ConfirmSendQuestion);
                             }
                             else
                             {
-                                Session.DiscordUsersReportDialogue[userdiscordid].Proof = Session.DiscordUsersReportDialogue[userdiscordid].Proof + arg.Content + "\n";
+                                Claim.DiscordUsersReportDialogue[userdiscordid].Proof = Claim.DiscordUsersReportDialogue[userdiscordid].Proof + arg.Content + "\n";
                                 foreach (Attachment attachment in arg.Attachments.ToList())
                                 {
-                                    Session.DiscordUsersReportDialogue[userdiscordid].Proof = Session.DiscordUsersReportDialogue[userdiscordid].Proof + attachment.ProxyUrl + "\n";
+                                    Claim.DiscordUsersReportDialogue[userdiscordid].Proof = Claim.DiscordUsersReportDialogue[userdiscordid].Proof + attachment.ProxyUrl + "\n";
                                 }
                             }
                             break;
                         case ReportStage.ConfirmSendQuestion:
                             if (arg.Content.ToLower() == KeyWord.ConfirmSendAnswerYes.ToLower() || arg.Content.ToLower() == "1")
                             {
-                                string[] result = Session.GetReportMessage(Session.DiscordUsersReportDialogue[userdiscordid]);
-                                await (_client.GetGuild(Info.ServerId).GetChannel(Info.ReportChannelId) as IMessageChannel).SendMessageAsync(result[0]);
-                                await (_client.GetGuild(Info.ServerId).GetChannel(Info.ReportFullChannelId) as IMessageChannel).SendMessageAsync(Session.GetFullReportMessage(Session.DiscordUsersReportDialogue[userdiscordid], arg.Author.Id, ulong.Parse(result[1])));
+                                string[] result = Claim.GetReportMessage(Claim.DiscordUsersReportDialogue[userdiscordid]);
+                                await (DiscordSocketClient.GetGuild(Info.ServerId).GetChannel(Info.ReportChannelId) as IMessageChannel).SendMessageAsync(result[0]);
+                                await (DiscordSocketClient.GetGuild(Info.ServerId).GetChannel(Info.ReportFullChannelId) as IMessageChannel).SendMessageAsync(Claim.GetFullReportMessage(Claim.DiscordUsersReportDialogue[userdiscordid], arg.Author.Id, ulong.Parse(result[1])));
                                 await arg.Channel.SendMessageAsync("Ваша жалоба успешно отправлена.");
-                                Session.DiscordUsersReportDialogue.Remove(userdiscordid);
+                                Claim.DiscordUsersReportDialogue.Remove(userdiscordid);
                             }
                             else if (arg.Content.ToLower() == KeyWord.ConfirmSendAnswerNo.ToLower() || arg.Content.ToLower() == "2")
                             {
-                                string[] result = Session.GetReportMessage(Session.DiscordUsersReportDialogue[userdiscordid]);
-                                await (_client.GetGuild(Info.ServerId).GetChannel(Info.LogsChannelId) as IMessageChannel).SendMessageAsync(KeyWord.HiddenMessage + Session.GetFullReportMessage(Session.DiscordUsersReportDialogue[userdiscordid], arg.Author.Id, ulong.Parse(result[1])));
+                                string[] result = Claim.GetReportMessage(Claim.DiscordUsersReportDialogue[userdiscordid]);
+                                await (DiscordSocketClient.GetGuild(Info.ServerId).GetChannel(Info.LogsChannelId) as IMessageChannel).SendMessageAsync(KeyWord.HiddenMessage + Claim.GetFullReportMessage(Claim.DiscordUsersReportDialogue[userdiscordid], arg.Author.Id, ulong.Parse(result[1])));
                                 await arg.Channel.SendMessageAsync("Ваша жалоба не отправлена.");
-                                Session.DiscordUsersReportDialogue.Remove(userdiscordid);
+                                Claim.DiscordUsersReportDialogue.Remove(userdiscordid);
                             }
                             else
                             {
@@ -339,7 +277,7 @@ namespace InternalService
                             }
                             break;
                         default:
-                            Session.DiscordUsersReportDialogue.Remove(userdiscordid);
+                            Claim.DiscordUsersReportDialogue.Remove(userdiscordid);
                             return;
                     }
                 }
@@ -347,12 +285,12 @@ namespace InternalService
                 {
                     if (arg.Content.ToLower() == (KeyWord.Prefix + KeyWord.Report).ToLower())
                     {
-                        Session.DiscordUsersReportDialogue[userdiscordid] = new Report()
+                        Claim.DiscordUsersReportDialogue[userdiscordid] = new Report()
                         {
                             ReportStage = ReportStage.SuspectQuestion,
                             Sender = arg.Author.Mention
                         };
-                        await arg.Author.SendMessageAsync(KeyWord.QuestionsReport[Session.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
+                        await arg.Author.SendMessageAsync(KeyWord.QuestionsReport[Claim.DiscordUsersReportDialogue[userdiscordid].ReportStage]);
                     }
                     else
                     {
@@ -361,58 +299,102 @@ namespace InternalService
                 }
             }
 
-            
-            
-        }
-        public static void Main()
-        {
-            Console.WriteLine("Program version - " + Info.Version);
-            Info.CreateData();
-            SaveLoad.LoadReporters();
-            SaveLoad.LoadReportId();
-            SaveLoad.SaveReporters();
-            SaveLoad.SaveReportId();
-            Info.BotToken = Info.GetBotToken();
 
-            Thread thread = new Thread(new Program().RunBotAsync().GetAwaiter().GetResult);
-            thread.Start();
-            Thread thread1 = new Thread(LoopCheckForUpdate);
-            thread1.Start();
-            Thread thread2 = new Thread(Global.UpdateServers);
-            thread2.Start();
-        }
 
-        public static void SendPlayersWhoPlayedMessage(string message)
-        {
-            _client.GetGuild(351766372264574976).GetTextChannel(639060639070814208).SendMessageAsync(message);
         }
-
-        public static void CheckForUpdatePlayersWhoPlayedFile()
+        public void SendMessage(ulong serverId, ulong channelId, string message)
         {
-            try
+            DiscordSocketClient.GetGuild(serverId).GetTextChannel(channelId).SendMessageAsync(message);
+        }
+        #endregion
+
+        #region Accountant
+        public bool CheckUserIsAccountant(ulong discordId)
+        {
+            if (DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetUser(discordId) != null)
             {
-                if (!File.Exists(Path.Combine(PlayersWhoPlayed.Global.FilePath, PlayersWhoPlayed.Global.FileName)))
-                    File.Create(Path.Combine(PlayersWhoPlayed.Global.FilePath, PlayersWhoPlayed.Global.FileName));
-                string message = File.ReadAllText(Path.Combine(PlayersWhoPlayed.Global.FilePath, PlayersWhoPlayed.Global.FileName), System.Text.Encoding.UTF8);
-                if (message != PlayersWhoPlayed.Global.VoidData)
+                if (DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetUser(discordId).Roles.Where(x => x.Id == RoleplayNickname.AccountantRoleId).FirstOrDefault() != default)
+                    return true;
+            }
+            return false;
+        }
+        private async Task HandleMessageUpdatedAsync(Cacheable<IMessage, ulong> arg1, SocketMessage arg2, ISocketMessageChannel arg3)
+        {
+            ulong userdiscordid = arg2.Author.Id;
+            if (!CheckUserIsAccountant(userdiscordid))
+                return;
+            string message = string.Empty;
+            switch (arg2.Channel.Id)
+            {
+                case RoleplayNickname.FullRpWhitelistChannelId:
+                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
+                    {
+                        if (i == 0)
+                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
+                        else
+                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
+                    }
+                    RoleplayNickname.UpdateFullRpWhitelist(message);
+                    await DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.FullRpWhitelistChannelId).Mention);
+                    break;
+                case RoleplayNickname.PluginIdentifyChannelId:
+                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
+                    {
+                        if (i == 0)
+                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
+                        else
+                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
+                    }
+                    RoleplayNickname.UpdatePluginIdentify(message);
+                    await DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.PluginIdentifyChannelId).Mention);
+                    break;
+                case RoleplayNickname.PluginIdentifyRandomChannelId:
+                    for (int i = arg2.Channel.GetMessagesAsync(100).Flatten().CountAsync().Result - 1; i > -1; i--)
+                    {
+                        if (i == 0)
+                            message += arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content;
+                        else
+                            message = message + arg2.Channel.GetMessagesAsync(100).Flatten().ToArrayAsync().Result[i].Content + "\n";
+                    }
+                    RoleplayNickname.UpdatePluginIdentifyRandom(message);
+                    await DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.ManageChannelId).SendMessageAsync("Обновлен список " + DiscordSocketClient.GetGuild(RoleplayNickname.ServerId).GetTextChannel(RoleplayNickname.PluginIdentifyRandomChannelId).Mention);
+                    break;
+            }
+            return;
+        }
+
+        #endregion
+
+        #region Logs
+        public bool CheckUserHaveAccessToLogs(ulong discordId)
+        {
+            if (DiscordSocketClient.GetGuild(351766372264574976).GetUser(discordId) != null)
+            {
+                foreach (ulong id in Global.AccessLogsRolesId)
                 {
-                    SendPlayersWhoPlayedMessage(message);
-                    File.WriteAllText(Path.Combine(PlayersWhoPlayed.Global.FilePath, PlayersWhoPlayed.Global.FileName), PlayersWhoPlayed.Global.VoidData);
+                    if (DiscordSocketClient.GetGuild(351766372264574976).GetUser(discordId).Roles.Where(x => x.Id == id).FirstOrDefault() != default)
+                        return true;
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Catch exception: " + ex.Message);
-            }
+            return false;
         }
+        #endregion
 
-        public static void LoopCheckForUpdate()
+        #region Empty roles
+        private void WriteEmptyRoles()
         {
-            while (Global.Active)
+            string message = "Пустые роли:\n";
+            int count = 0;
+            foreach (SocketRole role in DiscordSocketClient.GetGuild(351766372264574976).Roles)
             {
-                Thread.Sleep(10000);
-                CheckForUpdatePlayersWhoPlayedFile();
+                if (role.Members.Count() == 0)
+                {
+                    count++;
+                    message = message + "\n" + count + ") " + role.Mention;
+                }
             }
+            DiscordSocketClient.GetGuild(351766372264574976).GetTextChannel(689181158730104973).SendMessageAsync(message + "\n");
         }
+        #endregion
     }
 }

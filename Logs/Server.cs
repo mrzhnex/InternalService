@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace InternalService
+namespace InternalService.Logs
 {
     public class Server
     {

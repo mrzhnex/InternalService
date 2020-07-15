@@ -1,4 +1,4 @@
-﻿namespace InternalService
+﻿namespace InternalService.Logs
 {
     public class LogsDialogue
     {

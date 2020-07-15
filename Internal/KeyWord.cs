@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace InternalService
+namespace InternalService.Internal
 {
     public static class KeyWord
     {

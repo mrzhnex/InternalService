@@ -1,4 +1,4 @@
-﻿namespace InternalService
+﻿namespace InternalService.Internal
 {
     public class Report
     {

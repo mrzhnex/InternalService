@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace InternalService
+namespace InternalService.Internal
 {
-    public static class Session
+    public static class Claim
     {
         public static readonly Dictionary<ulong, Report> DiscordUsersReportDialogue = new Dictionary<ulong, Report>();
-
-        public static readonly Dictionary<ulong, LogsDialogue> DiscordUsersLogsDialogue = new Dictionary<ulong, LogsDialogue>();
 
         public static string[] GetReportMessage(Report report)
         {

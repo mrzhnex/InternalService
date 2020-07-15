@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace InternalService
+namespace InternalService.Manage
 {
     public static class Info
     {
-        public static readonly string Version = "1.A.4";
+        public static readonly string Version = "1.A.5";
 
         public static string BotToken = "";
         public static readonly ulong ServerId = 678659777550745608;
@@ -22,11 +22,11 @@ namespace InternalService
         public static readonly string ReportIdFileName = "ReportId.xml";
         public static readonly string LogsExitFileName = "ToCommunication.jpg";
 
-        private static readonly string DataFolderName = "InternalServiceData";
-        private static readonly string HostDataPath = Path.Combine("/etc/PluginData/", DataFolderName);
+        private static readonly string DataFolderName = "Internal";
+        private static readonly string HostDataPath = Path.Combine("/etc/scpsl/", DataFolderName);
 
         private static readonly string BotTokenFileName = "DiscordBotToken.txt";
-        private static readonly string BotTokenFilePath = Path.Combine("/etc/PluginData/", BotTokenFileName);
+        private static readonly string BotTokenFilePath = Path.Combine("/etc/scpsl/Administrative/", BotTokenFileName);
 
         public static string GetDataPath()
         {

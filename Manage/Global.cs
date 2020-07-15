@@ -2,8 +2,9 @@
 using System.Linq;
 using System.IO;
 using System.Threading;
+using InternalService.Logs;
 
-namespace InternalService
+namespace InternalService.Manage
 {
     public static class Global
     {
@@ -18,9 +19,12 @@ namespace InternalService
             {"/home/scpsllightrp2/.config/SCP Secret Laboratory/ServerLogs/7778/", "Light RP #2" },
             {"/home/scpsllightrp3/.config/SCP Secret Laboratory/ServerLogs/7779/", "Light RP #3" },
             {"/home/scpsllightrp4/.config/SCP Secret Laboratory/ServerLogs/7780/", "Light RP #4" },
-            {"/home/scpsllightrp-event/.config/SCP Secret Laboratory/ServerLogs/7783/", "Light RP Event" },
-            {"/home/scpslnonrp1/.config/SCP Secret Laboratory/ServerLogs/7785/", "Light Non-RP #1" },
-            {"/home/scpslnonrp2/.config/SCP Secret Laboratory/ServerLogs/7786/", "Light Non-RP #2" }           
+            {"/home/scpslmediumrp1/.config/SCP Secret Laboratory/ServerLogs/7781/", "Medium RP #1" },
+            {"/home/scpslmediumrp2/.config/SCP Secret Laboratory/ServerLogs/7782/", "Medium RP #2" },
+            {"/home/scpsllightrpevent/.config/SCP Secret Laboratory/ServerLogs/7783/", "Light RP Event" },
+            {"/home/scpslnonrp1/.config/SCP Secret Laboratory/ServerLogs/7784/", "Light Non-RP #1" },
+            {"/home/scpslnonrp2/.config/SCP Secret Laboratory/ServerLogs/7785/", "Light Non-RP #2" },
+            {"/home/scpsllightrplightsout/.config/SCP Secret Laboratory/ServerLogs/7786/", "Light RP Lights-out" },
         };
 
         public static readonly List<ulong> AccessLogsRolesId = new List<ulong>()

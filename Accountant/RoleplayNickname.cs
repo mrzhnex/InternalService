@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace InternalService
+namespace InternalService.Accountant
 {
     public static class RoleplayNickname
     {
@@ -11,9 +11,9 @@ namespace InternalService
         public const ulong AccountantRoleId = 707275136776142900;
         public const ulong ManageChannelId = 710245931533992046;
 
-        public static readonly string FullRpWhitelistFullFileName = Path.Combine("/etc/scpsl/config_common/SteamIDWhitelist.txt");
-        public static readonly string PluginIdentifyFullFileName = Path.Combine("/etc/PluginData/FixedNames.txt");
-        public static readonly string PluginIdentifyRandomFullFileName = Path.Combine("/etc/PluginData/RandomNames.txt");
+        public static readonly string FullRpWhitelistFullFileName = Path.Combine("/etc/scpsl/Main/UserIDWhitelist.txt");
+        public static readonly string PluginIdentifyFullFileName = Path.Combine("/etc/scpsl/Plugin/FixedNames.txt");
+        public static readonly string PluginIdentifyRandomFullFileName = Path.Combine("/etc/scpsl/Plugin/RandomNames.txt");
 
         public static void UpdateFullRpWhitelist(string message)
         {
@@ -23,7 +23,7 @@ namespace InternalService
             }
             catch (System.Exception ex)
             {
-                Program._client.GetGuild(ServerId).GetTextChannel(ManageChannelId).SendMessageAsync("Ошибка при обновлении данных в файле: " + ex.Message);
+                Program.ProgramSession.SendMessage(ServerId, ManageChannelId, "Ошибка при обновлении данных в файле: " + ex.Message);
             }
         }
 
@@ -35,7 +35,7 @@ namespace InternalService
             }
             catch (System.Exception ex)
             {
-                Program._client.GetGuild(ServerId).GetTextChannel(ManageChannelId).SendMessageAsync("Ошибка при обновлении данных в файле: " + ex.Message);
+                Program.ProgramSession.SendMessage(ServerId, ManageChannelId, "Ошибка при обновлении данных в файле: " + ex.Message);
             }
         }
 
@@ -47,7 +47,7 @@ namespace InternalService
             }
             catch (System.Exception ex)
             {
-                Program._client.GetGuild(ServerId).GetTextChannel(ManageChannelId).SendMessageAsync("Ошибка при обновлении данных в файле: " + ex.Message);
+                Program.ProgramSession.SendMessage(ServerId, ManageChannelId, "Ошибка при обновлении данных в файле: " + ex.Message);
             }
         }
     }

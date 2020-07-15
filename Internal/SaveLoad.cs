@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using InternalService.Manage;
 
-namespace InternalService
+namespace InternalService.Internal
 {
     public static class SaveLoad
     {     
         public static readonly XmlSerializer ReportersFormatter = new XmlSerializer(typeof(List<ulong>));
         public static readonly XmlSerializer ReportIdFormatter = new XmlSerializer(typeof(ulong));
-
-
 
         public static void LoadReportId()
         {
@@ -17,7 +16,7 @@ namespace InternalService
             {
                 using (FileStream fs = new FileStream(Path.Combine(Info.GetDataPath(), Info.ReportIdFileName), FileMode.Open))
                 {
-                    Session.ReportId = (ulong)ReportIdFormatter.Deserialize(fs);
+                    Claim.ReportId = (ulong)ReportIdFormatter.Deserialize(fs);
                 }
             }
             catch (System.Exception)
@@ -32,7 +31,7 @@ namespace InternalService
             {
                 using (FileStream fs = new FileStream(Path.Combine(Info.GetDataPath(), Info.ReportIdFileName), FileMode.Open))
                 {
-                    ReportIdFormatter.Serialize(fs, Session.ReportId);
+                    ReportIdFormatter.Serialize(fs, Claim.ReportId);
                 }
             }
             catch (System.Exception)
