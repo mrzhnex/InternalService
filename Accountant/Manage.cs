@@ -1,6 +1,5 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using InternalService.Main;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;

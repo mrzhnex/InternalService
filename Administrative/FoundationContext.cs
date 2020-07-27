@@ -1,17 +1,28 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace InternalService.Administrative
 {
     public class FoundationContext : DbContext
     {
-        public FoundationContext(string connectionString) : base(connectionString) { }
+        public FoundationContext()
+        {
+            Database.EnsureCreated();
+        }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Post> Posts { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (Database.Exists())
-                Database.SetInitializer<FoundationContext>(null);
+            optionsBuilder.UseMySql(Info.ConnectionString);
+            base.OnConfiguring(optionsBuilder);
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
             base.OnModelCreating(modelBuilder);
+        }
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
         }
     }
 }

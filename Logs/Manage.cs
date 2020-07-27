@@ -27,7 +27,6 @@ namespace InternalService.Logs
             {"/home/scpsllightrpevent/.config/SCP Secret Laboratory/ServerLogs/7783/", "Light RP Event" },
             {"/home/scpslnonrp1/.config/SCP Secret Laboratory/ServerLogs/7784/", "Light Non-RP #1" },
             {"/home/scpslnonrp2/.config/SCP Secret Laboratory/ServerLogs/7785/", "Light Non-RP #2" },
-            {"/home/scpsllightrplightsout/.config/SCP Secret Laboratory/ServerLogs/7786/", "Light RP Lights-out" },
         };
 
         public static readonly List<ulong> AccessLogsRolesId = new List<ulong>()

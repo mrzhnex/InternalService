@@ -20,12 +20,16 @@ namespace InternalService.Main
         }
         public static void Main(string [] args)
         {
-            if (args.Length > 1 && bool.TryParse(args[0], out bool isHost))
+            if (args.Length > 0 && bool.TryParse(args[0], out bool isHost))
             {
                 Info.IsHost = isHost;
             }
-            Console.WriteLine("Program version - " + Info.Version);
+            Console.WriteLine("{0} - {1}", nameof(Info.Version), Info.Version);
+            Console.WriteLine("{0} - {1}", nameof(Info.IsHost), Info.IsHost.ToString());
             SetBotToken();
+            SetConnetionString();
+            Console.WriteLine("{0} - {1} ", nameof(Info.BotToken), Info.BotToken);
+            Console.WriteLine("{0} - {1}", nameof(Administrative.Info.ConnectionString), Administrative.Info.ConnectionString);
             if (Info.IsHost)
             {
                 SaveLoad.LoadReporters();
@@ -59,15 +63,13 @@ namespace InternalService.Main
                 DiscordSocketClient.MessageReceived += Internal.Manage.OnMessageReceived;
                 DiscordSocketClient.MessageUpdated += Accountant.Manage.OnMessageUpdated;
             }
-            else
-            {
-                DiscordSocketClient.MessageReceived += Administrative.Manage.OnMessageReceived;
-                DiscordSocketClient.UserBanned += Administrative.Manage.OnUserBanned;
-                DiscordSocketClient.UserLeft += Administrative.Manage.OnUserLeft;
-                DiscordSocketClient.RoleDeleted += Administrative.Manage.OnRoleDeleted;
-                DiscordSocketClient.RoleUpdated += Administrative.Manage.OnRoleUpdated;
-                DiscordSocketClient.GuildMemberUpdated += Administrative.Manage.OnGuildMemberUpdated;               
-            }
+            DiscordSocketClient.MessageReceived += Administrative.Manage.OnMessageReceived;
+            DiscordSocketClient.UserBanned += Administrative.Manage.OnUserBanned;
+            DiscordSocketClient.UserLeft += Administrative.Manage.OnUserLeft;
+            DiscordSocketClient.RoleDeleted += Administrative.Manage.OnRoleDeleted;
+            DiscordSocketClient.RoleUpdated += Administrative.Manage.OnRoleUpdated;
+            DiscordSocketClient.GuildMemberUpdated += Administrative.Manage.OnGuildMemberUpdated;
+            DiscordSocketClient.Ready += Administrative.Manage.OnReady;
             await DiscordSocketClient.LoginAsync(TokenType.Bot, Info.BotToken);
             await DiscordSocketClient.StartAsync();
             await Task.Delay(-1);
@@ -96,6 +98,13 @@ namespace InternalService.Main
                 Info.BotToken = File.ReadAllText(Path.Combine("/etc/scpsl/Administrative/", "DiscordBotToken.txt"));
             else
                 Info.BotToken = File.ReadAllText(Path.Combine("E:/Info/", "DiscordBotToken.txt"));
+        }
+        public static void SetConnetionString()
+        {
+            if (Info.IsHost)
+                Administrative.Info.ConnectionString = File.ReadAllText(Path.Combine("/etc/scpsl/Administrative/", "ConnectionString.txt"));
+            else
+                Administrative.Info.ConnectionString = File.ReadAllText(Path.Combine("E:/Info/", "ConnectionString.txt"));
         }
     }
     public enum LogType

@@ -1,4 +1,4 @@
-﻿using System.Data.SqlClient;
+﻿using System.IO;
 
 namespace InternalService.Administrative
 {
@@ -8,17 +8,18 @@ namespace InternalService.Administrative
         public static readonly string UsernameSplitSymbol = ",";
         public static readonly string UnknownErrorMessage = "Произошла неизвестная ошибка.";
         public static readonly string SteamIdIsNotSetMessage = "Идентификатор стима не установлен.";
-
-        public static string ConnectionString = new SqlConnectionStringBuilder
-        {
-            DataSource = @"(localdb)\MSSQLLocalDB",
-            InitialCatalog = "Foundation",
-            IntegratedSecurity = true,
-            ConnectTimeout = 30,
-            Encrypt = false,
-            TrustServerCertificate = false,
-            ApplicationIntent = ApplicationIntent.ReadWrite,
-            MultiSubnetFailover = false
-        }.ConnectionString;
+        public static readonly string DefaultSteamId = "0";
+        public static string AdministrationFullFileName 
+        { 
+            get
+            {
+                if (Main.Info.IsHost)
+                    return Path.Combine("/etc/scpsl/Administrative/", "Administration.txt");
+                else
+                    return Path.Combine("E:/Info/", "Administration.txt");
+            }
+            private set { }
+        }
+        public static string ConnectionString = string.Empty;
     }
 }
