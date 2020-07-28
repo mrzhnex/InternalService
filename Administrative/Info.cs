@@ -9,6 +9,7 @@ namespace InternalService.Administrative
         public static readonly string UnknownErrorMessage = "Произошла неизвестная ошибка.";
         public static readonly string SteamIdIsNotSetMessage = "Идентификатор стима не установлен.";
         public static readonly string DefaultSteamId = "0";
+        public static bool IsUpdated = false;
         public static string AdministrationFullFileName 
         { 
             get
