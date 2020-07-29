@@ -19,18 +19,19 @@ namespace InternalService.Administrative
                 if (post == null)
                 {
                     if (IsEmployee(socketGuildUser.Id.ToString()))
-                        await RemoveEmployeeAsync(socketGuildUser.Id.ToString(), socketGuildUser.Mention, result);
+                        result = await RemoveEmployeeAsync(socketGuildUser.Id.ToString(), socketGuildUser.Mention, result);
                     else
                         continue;
                 }
                 else
                 {
                     if (IsEmployee(socketGuildUser.Id.ToString()))
-                        await UpdateEmployeeAsync(socketGuildUser.Id.ToString(), post, result);
+                        result = await UpdateEmployeeAsync(socketGuildUser.Id.ToString(), post, result);
                     else
-                        await SetEmployeeAsync(socketGuildUser.Id.ToString(), socketGuildUser.Mention, Info.DefaultSteamId, post.DiscordId, result);
+                        result = await SetEmployeeAsync(socketGuildUser.Id.ToString(), socketGuildUser.Mention, Info.DefaultSteamId, post.DiscordId, result);
                 }
-                output = output + result + "\n";
+                if (result != string.Empty)
+                    output = output + result + "\n";
                 if (output.Length > 1900)
                 {
                     await Main.Manage.Log(Main.LogType.Trace, output);
@@ -147,10 +148,17 @@ namespace InternalService.Administrative
         {
             using (FoundationContext db = new FoundationContext())
             {
-                Employee employee = db.Employees.FirstOrDefault(x => x.DiscordId == discordId);
-                employee.Post = db.Posts.FirstOrDefault(x => x.DiscordId == post.DiscordId);
-                result = "Сотруднику " + employee.Name + " переопределена должность - \"" + employee.Post.Name + "\".";
-                await db.SaveChangesAsync();
+                Employee employee = db.Employees.Include(x => x.Post).FirstOrDefault(x => x.DiscordId == discordId);
+                if (employee.Post != null && employee.Post.DiscordId != post.DiscordId)
+                {
+                    employee.Post = db.Posts.FirstOrDefault(x => x.DiscordId == post.DiscordId);
+                    result = "Сотруднику " + employee.Name + " переопределена должность - \"" + employee.Post.Name + "\".";
+                    await db.SaveChangesAsync();
+                }
+                else
+                {
+                    result = string.Empty;
+                }
             }
             return result;
         }
@@ -193,6 +201,10 @@ namespace InternalService.Administrative
             {
                 return db.Posts.FirstOrDefault(x => x.DiscordId == discordId) != default;
             }
+        }
+        public static string EmployeeToString(Employee employee)
+        {
+            return employee.SteamId + "] - " + employee.Name + " - " + employee.Post.Name;
         }
         #endregion
 
@@ -314,12 +326,12 @@ namespace InternalService.Administrative
             #endregion
 
             #region Parse Command
-            if (((Command)command == Command.Remove && args.Length < 3) || ((Command)command == Command.Set && args.Length < 4))
+            if (((Command)command == Command.Remove && args.Length < 3) || ((Command)command == Command.Set && args.Length < 4) || ((Entity)entity == Entity.Employee && (Command)command == Command.List && args.Length < 3))
             {
                 await arg.Channel.SendMessageAsync("Недостаточно аргументов!");
                 return;
             }
-            else if (((Command)command == Command.Remove && args.Length > 3) || ((Command)command == Command.Set && args.Length > 4))
+            else if (((Command)command == Command.Remove && args.Length > 3) || ((Command)command == Command.Set && args.Length > 4) || ((Entity)entity == Entity.Employee && (Command)command == Command.List && args.Length > 3))
             {
                 await arg.Channel.SendMessageAsync("Переизбыток аргументов!");
                 return;
@@ -405,20 +417,53 @@ namespace InternalService.Administrative
                             break;
                         case Command.List:
                             result = "Список сотрудников:";
-                            using (FoundationContext db = new FoundationContext())
+                            if (args[2].ToLower() == "all")
                             {
-                                if (db.Employees.ToList().Count() == 0)
-                                    result = "Сотрудники не определены.";
-                                foreach (Employee employee in db.Employees.Include(x => x.Post).ToList())
+                                using (FoundationContext db = new FoundationContext())
                                 {
-                                    result = result + "\n[" + employee.SteamId + "] - " + employee.Name + " - " + employee.Post.Name;
-                                    if (result.Length > 1900)
+                                    if (db.Employees.Include(x => x.Post).ToList().Count() == 0)
+                                        result = "Сотрудники не определены.";
+                                    foreach (Employee employee in db.Employees.Include(x => x.Post).ToList())
                                     {
-                                        await arg.Channel.SendMessageAsync(result);
-                                        result = string.Empty;
+                                        result = result + "\n[" + EmployeeToString(employee);
+                                        if (result.Length > 1900)
+                                        {
+                                            await arg.Channel.SendMessageAsync(result);
+                                            result = string.Empty;
+                                        }
                                     }
                                 }
                             }
+                            else
+                            {
+                                SocketRole socketRole = Main.Manage.DiscordSocketClient.GetGuild(Main.Info.MainServerId).Roles.Where(x => x.Mention == args[2]).FirstOrDefault();
+                                if (socketRole == default)
+                                {
+                                    await arg.Channel.SendMessageAsync("Должность \"" + args[2] + "\" не найдена!");
+                                    return;
+                                }
+                                if (!IsPost(socketRole.Id.ToString()))
+                                {
+                                    await arg.Channel.SendMessageAsync("Должность \"" + args[2] + "\" не определена!");
+                                    return;
+                                }
+                                using (FoundationContext db = new FoundationContext())
+                                {
+                                    string discordId = socketRole.Id.ToString();
+                                    if (db.Employees.Include(x => x.Post).Where(x => x.Post.DiscordId == discordId).ToList().Count() == 0)
+                                        result = "Сотрудники не определены.";
+                                    foreach (Employee employee in db.Employees.Include(x => x.Post).Where(x => x.Post.DiscordId == discordId).ToList())
+                                    {
+                                        result = result + "\n[" + EmployeeToString(employee);
+                                        if (result.Length > 1900)
+                                        {
+                                            await arg.Channel.SendMessageAsync(result);
+                                            result = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+
                             if (result != string.Empty)
                                 await arg.Channel.SendMessageAsync(result);
                             break;
