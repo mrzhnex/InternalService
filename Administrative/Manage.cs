@@ -255,7 +255,7 @@ namespace InternalService.Administrative
         {
             if (arg.Guild.Id != Main.Info.MainServerId)
                 return;
-            if (UserOnTheServer(arg.Id) && IsEmployee(arg.Id.ToString()))
+            if (IsEmployee(arg.Id.ToString()))
             {
                 string result = Info.UnknownErrorMessage;
                 await RemoveEmployeeAsync(arg.Id.ToString(), arg.Mention, result);
@@ -432,6 +432,7 @@ namespace InternalService.Administrative
                                             result = string.Empty;
                                         }
                                     }
+                                    result = result + "\n\nКоличество сотрудников: " + db.Employees.Include(x => x.Post).ToList().Count();
                                 }
                             }
                             else
@@ -461,11 +462,10 @@ namespace InternalService.Administrative
                                             result = string.Empty;
                                         }
                                     }
+                                    result = result + "\n\nКоличество сотрудников: " + db.Employees.Include(x => x.Post).Where(x => x.Post.DiscordId == discordId).ToList().Count();
                                 }
                             }
-
-                            if (result != string.Empty)
-                                await arg.Channel.SendMessageAsync(result);
+                            await arg.Channel.SendMessageAsync(result);
                             break;
                     }
                     break;
