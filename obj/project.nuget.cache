@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iZb4O2VaMTzzG3tgwLltazpIO1rdqRRANOVhvzt7o/QsFuWgN7iIawlJXtPIKe/ZFWniLSFdcgJXLIEl3R3MQw==",
+  "dgSpecHash": "9tNVpLymn5F2aA5ZWavu5Z20C4zDPqTP7M1WXP8u2gAY2VNpscP5uL1afevawLYXLe2tUm6SFvtpmqcAPCYIsQ==",
   "success": true,
   "projectFilePath": "E:\\Stuff\\InternalService\\InternalService.csproj",
   "expectedPackageFiles": [
@@ -38,10 +38,7 @@
     "C:\\Users\\Табула\\.nuget\\packages\\system.interactive.async\\4.0.0\\system.interactive.async.4.0.0.nupkg.sha512",
     "C:\\Users\\Табула\\.nuget\\packages\\system.linq.async\\4.0.0\\system.linq.async.4.0.0.nupkg.sha512",
     "C:\\Users\\Табула\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
-    "C:\\Users\\Табула\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
-    "C:\\Users\\Табула\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.0.3\\microsoft.netcore.app.runtime.linux-x64.3.0.3.nupkg.sha512",
-    "C:\\Users\\Табула\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.0.3\\microsoft.aspnetcore.app.runtime.linux-x64.3.0.3.nupkg.sha512",
-    "C:\\Users\\Табула\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.0.3\\microsoft.netcore.app.host.linux-x64.3.0.3.nupkg.sha512"
+    "C:\\Users\\Табула\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

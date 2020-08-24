@@ -14,7 +14,7 @@ namespace InternalService.Main
         public static DiscordSocketClient DiscordSocketClient { get; set; }
         public static async Task Log(LogType logType, string message, ulong serverId = Info.MainServerId, ulong channelId = Info.LogChannelId)
         {
-            message = "[" + logType.ToString() + "]: " + message;
+            message = $"[{logType}]: {message}";
             Console.WriteLine(message);
             await DiscordSocketClient.GetGuild(serverId).GetTextChannel(channelId).SendMessageAsync(message);
         }
@@ -24,12 +24,12 @@ namespace InternalService.Main
             {
                 Info.IsHost = isHost;
             }
-            Console.WriteLine("{0} - {1}", nameof(Info.Version), Info.Version);
-            Console.WriteLine("{0} - {1}", nameof(Info.IsHost), Info.IsHost.ToString());
+            Console.WriteLine($"{nameof(Info.Version)} - {Info.Version}");
+            Console.WriteLine($"{nameof(Info.IsHost)} - {Info.IsHost}");
             SetBotToken();
             SetConnetionString();
-            Console.WriteLine("{0} - {1} ", nameof(Info.BotToken), Info.BotToken);
-            Console.WriteLine("{0} - {1}", nameof(Administrative.Info.ConnectionString), Administrative.Info.ConnectionString);
+            Console.WriteLine($"{nameof(Info.BotToken)} - {Info.BotToken}");
+            Console.WriteLine($"{nameof(Administrative.Info.ConnectionString)} - {Administrative.Info.ConnectionString}");
             if (Info.IsHost)
             {
                 SaveLoad.LoadReporters();
@@ -54,26 +54,36 @@ namespace InternalService.Main
         }
         public static async Task RunBotAsync()
         {
-            DiscordSocketClient = new DiscordSocketClient();
+            DiscordSocketClient = new DiscordSocketClient(new DiscordSocketConfig() { MessageCacheSize = 999999 });
             DiscordSocketClient.Log += Log;
             if (Info.IsHost)
             {
-                DiscordSocketClient.MessageReceived += OnMessageReceived;
                 DiscordSocketClient.MessageReceived += Logs.Manage.OnMessageReceived;
                 DiscordSocketClient.MessageReceived += Internal.Manage.OnMessageReceived;
                 DiscordSocketClient.MessageUpdated += Accountant.Manage.OnMessageUpdated;
+                DiscordSocketClient.MessageReceived += Administrative.Manage.OnMessageReceived;
+                DiscordSocketClient.UserBanned += Administrative.Manage.OnUserBanned;
+                DiscordSocketClient.UserLeft += Administrative.Manage.OnUserLeft;
+                DiscordSocketClient.RoleDeleted += Administrative.Manage.OnRoleDeleted;
+                DiscordSocketClient.RoleUpdated += Administrative.Manage.OnRoleUpdated;
+                DiscordSocketClient.GuildMemberUpdated += Administrative.Manage.OnGuildMemberUpdated;
+                DiscordSocketClient.Ready += Administrative.Manage.OnReady;
             }
-            DiscordSocketClient.MessageReceived += Administrative.Manage.OnMessageReceived;
-            DiscordSocketClient.UserBanned += Administrative.Manage.OnUserBanned;
-            DiscordSocketClient.UserLeft += Administrative.Manage.OnUserLeft;
-            DiscordSocketClient.RoleDeleted += Administrative.Manage.OnRoleDeleted;
-            DiscordSocketClient.RoleUpdated += Administrative.Manage.OnRoleUpdated;
-            DiscordSocketClient.GuildMemberUpdated += Administrative.Manage.OnGuildMemberUpdated;
-            DiscordSocketClient.Ready += Administrative.Manage.OnReady;
+            DiscordSocketClient.MessageReceived += OnMessageReceived;
+            DiscordSocketClient.MessageDeleted += OnMessageDeleted;
             await DiscordSocketClient.LoginAsync(TokenType.Bot, Info.BotToken);
             await DiscordSocketClient.StartAsync();
             await Task.Delay(-1);
         }
+
+        private static async Task OnMessageDeleted(Cacheable<IMessage, ulong> arg1, ISocketMessageChannel arg2)
+        {
+            if (arg1.Value != null && DiscordSocketClient.GetGuild(Info.MainServerId).TextChannels.FirstOrDefault(x => x.Id == arg1.Value.Channel.Id) != default)
+            {
+                await Log(LogType.Debug, $"Удалено сообщение от автора {arg1.Value.Author.Mention} в канале <#{arg2.Id}>:\n{arg1.Value.Content}");
+            }
+        }
+
         public static async Task OnMessageReceived(SocketMessage arg)
         {
             if (arg.Content == null || arg.Author.IsBot || arg.Channel.Id != 689181158730104973 || arg.Content.ToLower() != "!emptyroles")

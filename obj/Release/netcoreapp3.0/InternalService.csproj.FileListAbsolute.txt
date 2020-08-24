@@ -42,3 +42,4 @@ E:\Stuff\InternalService\obj\Release\netcoreapp3.0\InternalService.genruntimecon
 E:\Stuff\InternalService\bin\Release\netcoreapp3.0\MySqlConnector.dll
 E:\Stuff\InternalService\bin\Release\netcoreapp3.0\Pomelo.EntityFrameworkCore.MySql.dll
 E:\Stuff\InternalService\bin\Release\netcoreapp3.0\Pomelo.JsonObject.dll
+E:\Stuff\InternalService\obj\Release\netcoreapp3.0\InternalService.csprojAssemblyReference.cache
